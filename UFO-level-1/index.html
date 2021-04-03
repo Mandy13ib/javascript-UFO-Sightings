@@ -3,44 +3,52 @@
 
 <head>
   <meta charset="utf-8">
-  <title>UFO Finder</title>
+    <title>UFO Finder level-1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Setting up the bootstraps -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    
+  <!-- Setting up the link to the css file -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
-
-<body>
+<!-- setting up the Content, Padding, Border and the Margin  -->
+<body><!-- Setting up the body -->
   <div class="wrapper">
-    <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default">
+    <!-- Setting up moving container -->
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">UFO Sightings
-            <img class="nav-ufo" src="static/images/ufo.svg">
+          <img class="nav-ufo" src="static/images/ufo.svg"><!-- adding image-->
           </a>
         </div>
       </div>
+    <!-- adding title and popup statement -->  
     </nav>
     <div class="hero text-center">
       <h1>UFO Sightings</h1>
       <p>The Truth is Out There</p>
-    </div>
+
+    </div><!-- Setting up the container -->
     <div class="container">
-      <div class="row margin-top-50">
+      <div class="row margin-top-30">
         <div class="col-md-2">
-          <aside class="filters">
+        <aside class="filters">
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
-              <div class="panel-body">
-                <form>
-                  <div class="form-group">
-                    <ul class="list-group" id="filters">
+                <div class="panel-body">
+                  <form>
+                   <!-- setting up the filter -->
+                    <div class="form-group">
+                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                      <label for="date">Enter a Date</label>
+                         <input class="form-control" id="datetime" type="text" placeholder="1/01/2010">
                       </li>
                     </ul>
                   </div>
+                  <!-- adding the filter button-->
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
                 </form>
               </div>
@@ -52,6 +60,7 @@
             <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
+                  <!-- Setting up the table headers -->
                   <th class="table-head">Date</th>
                   <th class="table-head">City</th>
                   <th class="table-head">State</th>
@@ -67,13 +76,14 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <span class="bottom">UFO Sightings</span>
-    </footer>
+    <!-- adding footer  -->
+      <footer class="footer">
+         <span class="bottom">   Butler University UFO Sightings Project  - Java Challenge  Mandy Farrell 2021</span>
+      </footer>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <script src="static/js/data.js"></script>
-  <script src="static/js/app.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+     <script src="static/js/data.js"></script>
+     <script src="static/js/app.js"></script>
 </body>
 
 </html>
