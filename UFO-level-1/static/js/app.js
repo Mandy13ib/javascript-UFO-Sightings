@@ -43,7 +43,7 @@ button.on("click", () => {
     if(response.filterDate.length !== 0) {
         addData(filterDate);
     }
-    // add comment if there is no sightings
+    // add comment if there is no sightings found for the date entered
         else {
             $tbody.append("tr").append("td").text("No Sightings Here...Move On...");
         }

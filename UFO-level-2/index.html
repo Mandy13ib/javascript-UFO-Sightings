@@ -3,14 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-    <title>UFO Finder level-1</title>
+    <title>UFO Finder level-2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Setting up the bootstraps -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    
-  <!-- Setting up the link to the css file -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <!-- Setting up the link to the css file -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
+    
 </head>
 <!-- setting up the Content, Padding, Border and the Margin  -->
 <body><!-- Setting up the body -->
@@ -20,17 +22,18 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">UFO Sightings
-          <img class="nav-ufo" src="static/images/ufo.svg"><!-- adding image-->
+          <!-- adding image-->  
+          <img class="nav-ufo" src="static/images/ufo.svg">
           </a>
         </div>
       </div>
-    <!-- adding title and popup statement -->  
     </nav>
+    <!-- adding title and popup statement --> 
     <div class="hero text-center">
       <h1>UFO Sightings</h1>
       <p>The Truth is Out There</p>
-
-    </div><!-- Setting up the container -->
+    <!-- Setting up the container -->
+    </div>
     <div class="container">
       <div class="row margin-top-40">
         <div class="col-md-2">
@@ -39,22 +42,28 @@
               <div class="panel-heading">Filter Search</div>
                 <div class="panel-body">
                   <form>
-                   <!-- setting up the filter -->
-                    <div class="form-group">
-                     <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                      <label for="date">Enter a Date</label>
-                         <input class="form-control" id="datetime" type="text" placeholder="1/01/2010">
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- adding the filter button-->
-                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
-                </form>
+                  <!-- Setting up the dropdown-->
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                                <select type="button" class="form-control btn btn-success" data-toggle="dropdown">
+                                    <option href="#" class="dropdown-item">Date</option>
+                                    <option href="#" class="dropdown-item">City</option>
+                                    <option href="#" class="dropdown-item">State</option>
+                                    <option href="#" class="dropdown-item">Country</option>
+                                    <option href="#" class="dropdown-item">Shape</option>
+                                </select>
+                          </div>
+                   <!-- setting up the text input -->
+                         <input type="text" id="input" class="form-control" placeholder="enter here">
+                      </div>
+                  </form>
+                <!-- adding button-->
+                 <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
               </div>
             </div>
           </aside>
         </div>
+      <div class="row margin-top-50"></div>
         <div class="col-md-10">
           <div id="table-area" class="">
             <table id="ufo-table" class="table table-striped">
