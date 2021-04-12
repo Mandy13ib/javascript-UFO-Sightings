@@ -36,18 +36,20 @@ button.on("click", () => {
     var inputDate = inputSelectDate.property("value").trim();
     // console.log(inputSelectDate)
     // clean up the input to what is needed
+    var inputElement = D3.select("#imput");
+    var inputValue = inputElement.property("value");
        // Filter Data with datetime equal to input value
 
        var inputCity = inputCity.property("value").toLowerCase().trim();
        // Filter Data with datetime equal to input value
-       var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
-       var filterCity = tableData.filter(tableData => tableData.city === inputCity);
-       var filterCombinedData = tableData.filter(tableData => tableData.datetime === inputDate && tableData.city === inputCity);
-       //var filterData = tableData.filter(sighting => sighting.datetime === inputValue ||
-       //                                             sighting.city === inputValue      ||
-       //                                             sighting.state === inputValue     ||
-       //                                             sighting.country === inputValue   ||
-       //                                             sighting.shape === inputValue);
+       //var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
+       //var filterCity = tableData.filter(tableData => tableData.city === inputCity);
+      // var filterCombinedData = tableData.filter(tableData => tableData.datetime === inputDate && tableData.city === inputCity);
+       var filterData = tableData.filter(sighting => sighting.datetime === inputValue ||
+                                                     sighting.city === inputValue      ||
+                                                     sighting.state === inputValue     ||
+                                                     sighting.country === inputValue   ||
+                                                     sighting.shape === inputValue);
      // Clears the initial build table
     $tbody.html("");
     
